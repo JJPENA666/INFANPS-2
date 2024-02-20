@@ -87,8 +87,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Rutas - Definir tus rutas aquí
 const authRoutes = require('./routes/authRoutes');
 const usuarioRoutes = require('./routes/usuarioRoutes');
+const gestionContenidoRoutes = require('./routes/gestionContenidoRoutes');
+const informacionSeguridadRoutes = require('./routes/informacionSeguridadRoutes');
+const actividadInteractivaRoutes = require('./routes/actividadInteractivaRoutes');
 // Rutas
 app.use(authRoutes);
 app.use(usuarioRoutes);
+app.use(gestionContenidoRoutes);
+app.use(informacionSeguridadRoutes);
+app.use(actividadInteractivaRoutes);
+
 // Exportar la aplicación
 module.exports = app;
